@@ -1,0 +1,33 @@
+{% extends 'base/main.html' %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task detail</title>
+</head>
+<body>
+{% block content%}
+<div class="header-bar">
+<a href="/">&#8592;Back</a>
+</div>
+ <div class="card-body">
+ <form method="POST" action="">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input class="button" type="submit" value="submit">
+</form>
+
+ </div>
+
+
+{% endblock content %}
+</body>
+</html>
+
